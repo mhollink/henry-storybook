@@ -3,6 +3,14 @@
 Alle belangrijke wijzigingen aan Henry's website worden
 hier per versie bijgehouden.
 
+## [v1.0.4] - 2026-10-09
+
+### Bug Fixes
+
+- Adjust analytics logging formatting and clean up metadata view tracking
+
+- Improve analytics debug logging and remove redundant console output
+
 ## [v1.0.2] - 2026-10-09
 
 ### Bug Fixes
