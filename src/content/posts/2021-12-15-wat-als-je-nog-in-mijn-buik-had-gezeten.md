@@ -3,7 +3,7 @@ schrijver: "Esmee (Mamma)"
 datum: "2021-12-15"
 categorie: "Mijlpaal"
 onderwerpen: [ ]
-cover: "/assets/posts/images/"
+cover: "/assets/posts/images/placeholder.png"
 titel: "De kerststemming"
 bijschrift: "Eigenlijk had ik een foto van jou rond willen sturen, maar door wat nare reacties op Facebook durfde ik het niet aan."
 ---

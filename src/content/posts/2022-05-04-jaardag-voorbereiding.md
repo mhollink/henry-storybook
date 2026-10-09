@@ -3,7 +3,7 @@ schrijver: "Esmee (Mamma)"
 datum: "2022-05-04"
 categorie: "Persoonlijk"
 onderwerpen: [ "mijlpaal", "zes", "maanden", "6 maanden", "half", "jaar", "jaardag" ]
-cover: "/assets/posts/images/"
+cover: "/assets/posts/images/placeholder.png"
 titel: "Voorbereidingen voor je verjaardag"
 bijschrift: "In het Engels is verjaardag een birthday. Verjaren doe je niet, maar geboren ben je wel."
 ---

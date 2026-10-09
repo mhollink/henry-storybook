@@ -3,7 +3,7 @@ schrijver: "Esmee (Mamma)"
 datum: "2022-07-09"
 categorie: "Brief"
 onderwerpen: [ "acht", "maanden", "8 maanden" ]
-cover: "/assets/posts/images/"
+cover: "/assets/posts/images/placeholder.png"
 titel: "Stiekem nog steeds voor jou"
 bijschrift: "Om ons heen zijn er heel veel baby'tjes die nu de maat hebben die jij ook ongeveer had moeten hebben. Als ik daar een cadeautje voor maak, maak ik soms stiekem 2 versies... Eentje voor in onze kast."
 ---

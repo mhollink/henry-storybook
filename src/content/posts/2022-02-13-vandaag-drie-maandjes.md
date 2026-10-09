@@ -3,7 +3,7 @@ schrijver: "Esmee (Mamma)"
 datum: "2022-02-13"
 categorie: "Mijlpaal"
 onderwerpen: [ ]
-cover: "/assets/posts/images/"
+cover: "/assets/posts/images/placeholder.png"
 titel: "3 maanden."
 bijschrift: "Ik mis je iedere dag, maar gelukkig kan ik nu ook andere dingen doen. Terugkijken naar echo's en me bedenken hoe gezellig het was. Want het was heel gezellig, zo met zijn drietjes."
 ---

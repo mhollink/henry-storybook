@@ -3,7 +3,7 @@ schrijver: "Esmee (Mamma)"
 datum: "2021-11-10"
 categorie: "Mijlpaal"
 onderwerpen: [ ]
-cover: "/assets/posts/images/"
+cover: "/assets/posts/images/placeholder.png"
 titel: "De uitgerekende datum"
 bijschrift: "Vandaag is het D-day. Zowel jij als ik weten dat we daarmee “Due-day” bedoelen. De dag dat jij had mogen komen. Wat voelt deze dag als een klap in mijn gezicht."
 ---

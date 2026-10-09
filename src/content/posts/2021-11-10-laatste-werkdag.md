@@ -3,7 +3,7 @@ schrijver: "Esmee (Mamma)"
 datum: "2021-11-10"
 categorie: "Persoonlijk"
 onderwerpen: ["laatste werkdag"]
-cover: "/assets/posts/images/winterlicht.png"
+cover: "/assets/posts/images/placeholder.png"
 titel: "10 November 2021"
 bijschrift: "Ik geniet vandaag van de aandacht van alle mensen die ik voor de laatste keer zie voordat ik met verlof ga. Iedereen vraagt hoe het gaat en hoe ik me voel."
 serie: "voor de bevalling"
