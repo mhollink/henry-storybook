@@ -1,40 +1,40 @@
 {
-	"name": "henry-storybook",
-	"private": true,
-	"version": "1.0.0",
-	"type": "module",
-	"scripts": {
-		"predev": "node scripts/generate-feeds.mjs",
-		"dev": "vite",
-		"content:generate": "node scripts/generate-feeds.mjs",
-		"build": "tsc -b && node scripts/generate-feeds.mjs && vite build",
-		"preview": "vite preview",
-		"format": "biome format --write .",
-		"lint": "biome lint .",
-		"check": "biome check .",
-		"check:fix": "biome check --write .",
-		"test": "vitest run",
-		"test:watch": "vitest",
-		"verify": "pnpm check && pnpm typecheck && pnpm test && pnpm build"
-	},
-	"dependencies": {
-		"@fontsource-variable/fraunces": "^5.2.0",
-		"@fontsource-variable/nunito-sans": "^5.2.0",
-		"dompurify": "^3.2.6",
-		"marked": "^16.4.1",
-		"react": "^19.1.1",
-		"react-dom": "^19.1.1",
-		"react-router-dom": "^7.9.5",
-		"yaml": "^2.8.1"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.5.15",
-		"@types/node": "^24.6.0",
-		"@types/react": "^19.1.16",
-		"@types/react-dom": "^19.1.9",
-		"@vitejs/plugin-react": "^6.1.2",
-		"typescript": "~5.9.3",
-		"vite": "^8.3.3",
-		"vitest": "^5.0.3"
-	}
+  "name": "henry-storybook",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/generate-feeds.mjs",
+    "dev": "vite",
+    "content:generate": "node scripts/generate-feeds.mjs",
+    "build": "tsc -b && node scripts/generate-feeds.mjs && vite build",
+    "preview": "vite preview",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "verify": "pnpm check && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "dependencies": {
+    "@fontsource-variable/fraunces": "^5.2.0",
+    "@fontsource-variable/nunito-sans": "^5.2.0",
+    "dompurify": "^3.2.6",
+    "marked": "^16.4.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.5",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@types/node": "^24.6.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.3",
+    "vitest": "^5.0.3"
+  }
 }
