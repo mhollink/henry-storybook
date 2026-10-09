@@ -28,6 +28,47 @@ const posts = await Promise.all(
     ...frontmatter(await readFile(join(POSTS_DIR, name), "utf8")),
   })),
 );
+// Generate a metadata-only index to keep full Markdown and YAML out of the initial bundle.
+const storyIndex = posts
+  .map((post) => {
+    if (
+      typeof post.titel !== "string" ||
+      !/^\d{4}-\d{2}-\d{2}$/.test(String(post.datum))
+    ) {
+      throw new Error(
+        `Story ${post.filename} requires titel and a YYYY-MM-DD datum`,
+      );
+    }
+    return {
+      filename: post.filename,
+      titel: post.titel,
+      schrijver: typeof post.schrijver === "string" ? post.schrijver : "",
+      datum: post.datum,
+      categorie:
+        typeof post.categorie === "string" ? post.categorie : "Verhaal",
+      onderwerpen: Array.isArray(post.onderwerpen)
+        ? post.onderwerpen.filter((value) => typeof value === "string")
+        : [],
+      ...(typeof post.cover === "string" && post.cover
+        ? { cover: post.cover }
+        : {}),
+      bijschrift: typeof post.bijschrift === "string" ? post.bijschrift : "",
+      ...(typeof post.serie === "string" && post.serie
+        ? { serie: post.serie }
+        : {}),
+      ...(typeof post.serieIndex === "number"
+        ? { serieIndex: post.serieIndex }
+        : {}),
+      verbergen: post.verbergen === true,
+    };
+  })
+  .sort((a, b) => b.datum.localeCompare(a.datum));
+await mkdir("src/content/generated", { recursive: true });
+await writeFile(
+  "src/content/generated/stories.json",
+  `${JSON.stringify(storyIndex, null, 2)}\n`,
+);
+
 const published = posts
   .filter((post) => !post.verbergen)
   .sort((a, b) => date(b.datum) - date(a.datum));

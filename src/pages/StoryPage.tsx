@@ -1,11 +1,36 @@
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { MarkdownContent } from "../components/stories/MarkdownContent.tsx";
+import { loadStoryMarkdown } from "../content/load-story";
 import { formatStoryDate, getStory, publicStories } from "../content/posts";
 import { NotFoundPage } from "./NotFoundPage";
 
+type ContentState =
+  | { status: "loading" }
+  | { status: "ready"; markdown: string }
+  | { status: "error" };
+
 export function StoryPage() {
   const { filename } = useParams<{ filename: string }>();
+  const [content, setContent] = useState<ContentState>({ status: "loading" });
   const story = getStory(filename);
+
+  useEffect(() => {
+    if (!filename || !story) return;
+    let active = true;
+    loadStoryMarkdown(filename).then(
+      (markdown) => {
+        if (active) setContent({ status: "ready", markdown });
+      },
+      () => {
+        if (active) setContent({ status: "error" });
+      },
+    );
+    return () => {
+      active = false;
+    };
+  }, [filename, story]);
+
   if (!story) return <NotFoundPage />;
 
   const publishedIndex = publicStories.findIndex(
@@ -34,7 +59,16 @@ export function StoryPage() {
           {story.cover && (
             <img className="reading-sheet__cover" src={story.cover} alt="" />
           )}
-          <MarkdownContent markdown={story.markdown} />
+          {content.status === "loading" ? (
+            <p role="status">Het verhaal wordt geladen...</p>
+          ) : content.status === "error" ? (
+            <p role="alert">
+              Het verhaal kon niet worden geladen. Probeer de pagina opnieuw te
+              openen.
+            </p>
+          ) : (
+            <MarkdownContent markdown={content.markdown} />
+          )}
           <div className="reading-sheet__ending" aria-hidden="true">
             ✦
           </div>

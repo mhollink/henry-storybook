@@ -7,8 +7,11 @@
   "scripts": {
     "predev": "node scripts/generate-feeds.mjs",
     "dev": "vite",
+    "precheck": "pnpm content:generate",
+    "pretypecheck": "pnpm content:generate",
+    "pretest": "pnpm content:generate",
     "content:generate": "node scripts/generate-feeds.mjs",
-    "build": "tsc -b && node scripts/generate-feeds.mjs && vite build",
+    "build": "node scripts/generate-feeds.mjs && tsc -b && vite build",
     "preview": "vite preview",
     "format": "biome format --write .",
     "lint": "biome lint .",

@@ -1,15 +1,39 @@
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Navigate, Outlet, Route, Routes, useLocation } from "react-router-dom";
+import { PageLoading } from "../components/layout/PageLoading";
 import { SiteFooter } from "../components/layout/SiteFooter";
 import { SiteHeader } from "../components/layout/SiteHeader";
 import { CookieBanner } from "../components/privacy/CookieBanner";
-import { AboutPage } from "../pages/AboutPage";
-import { HomePage } from "../pages/HomePage";
-import { NotFoundPage } from "../pages/NotFoundPage";
-import { PrivacyPage } from "../pages/PrivacyPage";
-import { StoriesPage } from "../pages/StoriesPage";
-import { StoryPage } from "../pages/StoryPage";
 import { PageMetadata } from "./PageMetadata";
+
+const HomePage = lazy(() =>
+  import("../pages/HomePage").then(({ HomePage }) => ({ default: HomePage })),
+);
+const StoriesPage = lazy(() =>
+  import("../pages/StoriesPage").then(({ StoriesPage }) => ({
+    default: StoriesPage,
+  })),
+);
+const StoryPage = lazy(() =>
+  import("../pages/StoryPage").then(({ StoryPage }) => ({
+    default: StoryPage,
+  })),
+);
+const AboutPage = lazy(() =>
+  import("../pages/AboutPage").then(({ AboutPage }) => ({
+    default: AboutPage,
+  })),
+);
+const PrivacyPage = lazy(() =>
+  import("../pages/PrivacyPage").then(({ PrivacyPage }) => ({
+    default: PrivacyPage,
+  })),
+);
+const NotFoundPage = lazy(() =>
+  import("../pages/NotFoundPage").then(({ NotFoundPage }) => ({
+    default: NotFoundPage,
+  })),
+);
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,7 +53,9 @@ function PageLayout() {
         Direct naar inhoud
       </a>
       <SiteHeader />
-      <Outlet />
+      <Suspense fallback={<PageLoading />}>
+        <Outlet />
+      </Suspense>
       <SiteFooter />
     </>
   );

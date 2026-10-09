@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parseStory } from "./posts";
+import { parseStory } from "./parse-story";
 
 describe("parseStory", () => {
   it("retains the legacy frontmatter format and URL filename", () => {
