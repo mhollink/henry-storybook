@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "packageManager": "pnpm@12.9.1",
   "scripts": {
     "predev": "node scripts/generate-feeds.mjs",
     "dev": "vite",
