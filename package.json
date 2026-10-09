@@ -21,6 +21,9 @@
     "test:watch": "vitest",
     "typecheck": "tsc -b --pretty false",
     "verify": "pnpm check && pnpm typecheck && pnpm test && pnpm build",
+    "release:patch": "node scripts/release.mjs patch",
+    "release:minor": "node scripts/release.mjs minor",
+    "release:major": "node scripts/release.mjs major",
     "changelog": "git-cliff --output CHANGELOG.md",
     "changelog:preview": "git-cliff --unreleased",
     "changelog:release": "git-cliff --current --strip header"
