@@ -437,9 +437,12 @@ p {
 }
 .category-filter {
   border: 0;
-  margin: 0;
   padding: 0;
   min-width: 0;
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.4rem;
 }
 .visually-hidden {
   position: absolute;
