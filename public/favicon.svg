@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Henry Hollink</title>
+  <rect width="64" height="64" rx="18" fill="#dcebf3"/>
+  <path d="M32 10 38.5 26 54 32 38.5 38 32 54 25.5 38 10 32 25.5 26Z" fill="#cba65b"/>
+  <circle cx="45" cy="16" r="3" fill="#fffdf9" />
+</svg>
