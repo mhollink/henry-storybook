@@ -47,6 +47,7 @@ export function PageMetadata() {
   const { consent } = useAnalyticsConsent();
 
   useEffect(() => {
+    console.debug("Reloading page meta data!");
     const meta = getMetadata(pathname);
     document.title = meta.title;
     document
@@ -55,6 +56,14 @@ export function PageMetadata() {
     if (consent === "granted") {
       startAnalytics();
       trackPageView(meta.title, pathname);
+      console.log("Sending page load to analytics", {
+        title: meta.title,
+        pathname,
+      });
+    } else {
+      console.warn(
+        "Skipped sending page view event to analytics, no consent given...",
+      );
     }
   }, [pathname, consent]);
 
