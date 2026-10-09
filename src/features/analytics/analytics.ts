@@ -13,12 +13,9 @@ declare global {
 }
 
 export function startAnalytics(): void {
+  if (initialized) return;
   if (!measurementId) {
     console.warn("Measurement ID is missing!");
-    return;
-  }
-  if (initialized) {
-    console.warn("Analytics already loaded...");
     return;
   }
   initialized = true;

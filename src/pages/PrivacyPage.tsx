@@ -69,11 +69,6 @@ export function PrivacyPage() {
             </p>
           </Fragment>
         )}
-        <p className="legal-page__footnote">
-          Controleer deze verklaring en je Google Analytics-instellingen vóór
-          publicatie. Dit is een praktisch uitgangspunt en geen juridisch
-          advies.
-        </p>
       </article>
     </main>
   );
