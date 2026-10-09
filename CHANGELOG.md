@@ -11,21 +11,7 @@ hier per versie bijgehouden.
 
 ## [v1.0.0] - 2026-10-09
 
-### Documentation
-
-- Add detailed README outlining project purpose, setup, and technical stack.
-
-
 ### Features
 
-- Generate static metadata index and add dynamic story loading
-
-
-### Styling
-
-- Refine category-filter styles with flex layout and spacing adjustments
-
-- Resolve code style errors reported by Biome
-
-- Normalize whitespace across the codebase for consistent formatting.
+- Create a fresh storybook-like blog page for Henry using the old blogs content
 
