@@ -45,7 +45,11 @@ export function startAnalytics(): void {
 }
 
 export function trackPageView(title: string, pathname: string): void {
-  if (!initialized || !window.gtag) return;
+  if (!initialized || !window.gtag) {
+    console.warn("Could not send page load to analytics", {initialized, gtag: !!window.gtag})
+    return;
+  }
+  console.log("Sending page load to analytics", {title, pathname});
   window.gtag("event", "page_view", {
     page_title: title,
     page_location: `${window.location.origin}${pathname}`,
