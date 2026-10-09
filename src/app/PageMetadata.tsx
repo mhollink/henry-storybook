@@ -56,7 +56,6 @@ export function PageMetadata() {
     if (consent === "granted") {
       startAnalytics();
       trackPageView(meta.title, pathname);
-
     } else {
       console.warn(
         "Skipped sending page view event to analytics, no consent given...",
