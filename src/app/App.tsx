@@ -13,9 +13,12 @@ import { PageMetadata } from "./PageMetadata";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: Scroll to top whenever the pathname changes.
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [pathname]);
+
   return null;
 }
 

@@ -64,7 +64,7 @@ const modules = import.meta.glob<string>("./posts/*.md", {
 
 export const stories: Story[] = Object.entries(modules)
   .map(([path, raw]) =>
-    parseStory(path.split("/").pop()!.replace(/\.md$/, ""), raw),
+    parseStory(path.replace(/^.*\//, "").replace(/\.md$/, ""), raw),
   )
   .sort((first, second) => second.datum.localeCompare(first.datum));
 

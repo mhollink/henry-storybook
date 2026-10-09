@@ -1,6 +1,5 @@
-import DOMPurify from "dompurify";
-import { marked } from "marked";
 import { Link, useParams } from "react-router-dom";
+import { MarkdownContent } from "../components/stories/MarkdownContent.tsx";
 import { formatStoryDate, getStory, publicStories } from "../content/posts";
 import { NotFoundPage } from "./NotFoundPage";
 
@@ -9,9 +8,6 @@ export function StoryPage() {
   const story = getStory(filename);
   if (!story) return <NotFoundPage />;
 
-  const html = DOMPurify.sanitize(
-    marked.parse(story.markdown, { async: false }) as string,
-  );
   const publishedIndex = publicStories.findIndex(
     (item) => item.filename === story.filename,
   );
@@ -38,11 +34,8 @@ export function StoryPage() {
           {story.cover && (
             <img className="reading-sheet__cover" src={story.cover} alt="" />
           )}
-          <div className="prose" dangerouslySetInnerHTML={{ __html: html }} />
-          <div
-            className="reading-sheet__ending"
-            aria-label="Einde van het verhaal"
-          >
+          <MarkdownContent markdown={story.markdown} />
+          <div className="reading-sheet__ending" aria-hidden="true">
             ✦
           </div>
         </article>

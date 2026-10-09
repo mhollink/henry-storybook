@@ -25,11 +25,10 @@ export function StoriesPage() {
           <p>Een verzameling woorden, momenten en verhalen voor Henry.</p>
         </header>
         {categories.length > 1 && (
-          <div
-            className="category-filter"
-            role="group"
-            aria-label="Filter verhalen op categorie"
-          >
+          <fieldset className="category-filter">
+            <legend className="visually-hidden">
+              Filter verhalen op categorie
+            </legend>
             {categories.map((item) => (
               <button
                 key={item}
@@ -41,7 +40,7 @@ export function StoriesPage() {
                 {item}
               </button>
             ))}
-          </div>
+          </fieldset>
         )}
         {filtered.length ? (
           <div className="stories-grid">

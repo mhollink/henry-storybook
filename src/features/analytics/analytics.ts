@@ -1,3 +1,4 @@
+// biome-ignore-all lint/suspicious/noDocumentCookie: Analytics consent revocation requires expiring existing GA cookies.
 const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID?.trim();
 let initialized = false;
 
@@ -14,10 +15,9 @@ declare global {
 export function startAnalytics(): void {
   if (!measurementId || initialized) return;
   initialized = true;
-  window.dataLayer = window.dataLayer ?? [];
-  window.gtag = (...parameters) => {
-    window.dataLayer!.push(parameters);
-  };
+  if (!window.dataLayer) window.dataLayer = [];
+  const dataLayer = window.dataLayer;
+  window.gtag = (...parameters) => dataLayer.push(parameters);
 
   // Basic consent mode v2: no Google request is made until consent is granted.
   window.gtag("consent", "default", {
