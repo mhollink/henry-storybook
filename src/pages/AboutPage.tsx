@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { SkyIllustration } from "../components/decorations/SkyIllustration";
 
@@ -18,6 +19,19 @@ export function AboutPage() {
           <p>
             Deze plek is voor Henry, maar ook voor iedereen die zijn verhaal wil
             leren kennen.
+          </p>
+          <p>
+            Voor Henry hebben we ook een ster laten registreren. Je kunt zijn
+            ster bekijken via{" "}
+            <a
+              className="text-link"
+              href="https://stars.osr.org/henry-ac-hollink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              zijn sterrenpagina <span aria-hidden="true">↗</span>
+            </a>
+            .
           </p>
           <Link className="button button--primary" to="/verhalen">
             Lees onze verhalen
