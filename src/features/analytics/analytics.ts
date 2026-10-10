@@ -7,7 +7,7 @@ type Gtag = (...parameters: unknown[]) => void;
 
 declare global {
   interface Window {
-    dataLayer?: unknown[][];
+    dataLayer?: IArguments[];
     gtag?: Gtag;
   }
 }
@@ -21,7 +21,9 @@ export function startAnalytics(): void {
   initialized = true;
   if (!window.dataLayer) window.dataLayer = [];
   const dataLayer = window.dataLayer;
-  window.gtag = (...parameters) => dataLayer.push(parameters);
+  window.gtag = function (..._parameters: unknown[]): void {
+    dataLayer.push(arguments);
+  };
 
   // Basic consent mode v2: no Google request is made until consent is granted.
   window.gtag("consent", "default", {
