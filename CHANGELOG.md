@@ -3,6 +3,12 @@
 Alle belangrijke wijzigingen aan Henry's website worden
 hier per versie bijgehouden.
 
+## [v1.0.5] - 2026-10-10
+
+### Bug Fixes
+
+- Update `gtag` initialization to correctly handle arguments type
+
 ## [v1.0.4] - 2026-10-09
 
 ### Bug Fixes
