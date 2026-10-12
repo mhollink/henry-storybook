@@ -3,6 +3,28 @@
 Alle belangrijke wijzigingen aan Henry's website worden
 hier per versie bijgehouden.
 
+## [v1.1.0] - 2026-10-12
+
+### Bug Fixes
+
+- Update sitemap and RSS feed with new post and `lastmod` dates
+
+
+### Documentation
+
+- Add images to story 2026-10-10-jouw-verhaal
+
+- Save story 2026-10-10-jouw-verhaal
+
+
+### Features
+
+- Add "Verhalenbeheer" link to footer navigation
+
+- Add link to Henry's star in SiteFooter
+
+- Enhance AboutPage with Henry's star information
+
 ## [v1.0.5] - 2026-10-10
 
 ### Bug Fixes
