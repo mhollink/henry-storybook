@@ -29,6 +29,13 @@ export function SiteFooter() {
             Cookievoorkeuren
           </button>
           <a href="/rss.xml">RSS</a>
+          <a
+            href="https://editor.hollink.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Verhalenbeheer
+          </a>
         </nav>
       </div>
     </footer>
