@@ -9,8 +9,8 @@ cover: ''
 bijschrift: ''
 serie: ''
 serieIndex: null
-schrijver: 'Marcel (Pappa)'
-schrijverId: pappa
+schrijver: 'Oma Hollink'
+schrijverId: oma-hollink
 ---
 Lieve Henry,
 
