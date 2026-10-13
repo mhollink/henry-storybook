@@ -1,5 +1,6 @@
 ---
 schrijver: "Esmee (Mamma)"
+schrijverId: mamma
 datum: "2021-11-27"
 categorie: "Brief"
 onderwerpen: ["tijd", "rouw"]

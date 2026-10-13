@@ -1,5 +1,6 @@
 ---
 schrijver: "Esmee (Mamma)"
+schrijverId: mamma
 datum: "2022-08-13"
 categorie: "Mijlpaal"
 onderwerpen: [ "mijlpaal", "negen", "maanden", "9 maanden" ]

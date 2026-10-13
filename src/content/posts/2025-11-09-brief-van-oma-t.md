@@ -1,5 +1,6 @@
 ---
 schrijver: "Oma Twix"
+schrijverId: 'oma-twix'
 datum: "2025-11-09"
 categorie: "Brief"
 onderwerpen: ["verjaardag", "vier", "sinterklaas", "mijlpaal"]

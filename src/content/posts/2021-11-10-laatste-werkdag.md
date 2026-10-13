@@ -1,5 +1,6 @@
 ---
 schrijver: "Esmee (Mamma)"
+schrijverId: mamma
 datum: "2021-11-10"
 categorie: "Persoonlijk"
 onderwerpen: ["laatste werkdag"]

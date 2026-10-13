@@ -1,5 +1,6 @@
 ---
 schrijver: "Esmee (Mamma)"
+schrijverId: mamma
 datum: "2022-07-09"
 categorie: "Brief"
 onderwerpen: [ "acht", "maanden", "8 maanden" ]

@@ -10,7 +10,8 @@ cover: '/images/stories/83f9c8b679015f409f70ddb743694c30.webp'
 bijschrift: 'En nu staat ons verhaal, jouw verhaal, echt op papier. In een boek dat we kunnen vasthouden, openslaan en lezen.'
 serie: ''
 serieIndex: null
-schrijver: Marcel
+schrijver: 'Marcel (Pappa)'
+schrijverId: pappa
 ---
 Lieve Henry,
 

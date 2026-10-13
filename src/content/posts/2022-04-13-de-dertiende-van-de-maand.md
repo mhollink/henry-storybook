@@ -1,5 +1,6 @@
 ---
 schrijver: "Esmee (Mamma)"
+schrijverId: mamma
 datum: "2022-04-13"
 categorie: "Persoonlijk"
 onderwerpen: [ "13e", "dertien", "pijnmoment", "mijlpaal" ]

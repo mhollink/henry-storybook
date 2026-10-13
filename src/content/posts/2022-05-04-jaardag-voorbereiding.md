@@ -1,5 +1,6 @@
 ---
 schrijver: "Esmee (Mamma)"
+schrijverId: mamma
 datum: "2022-05-04"
 categorie: "Persoonlijk"
 onderwerpen: [ "mijlpaal", "zes", "maanden", "6 maanden", "half", "jaar", "jaardag" ]

@@ -1,5 +1,6 @@
 ---
 schrijver: "Marcel (Pappa)"
+schrijverId: pappa
 datum: "2025-11-13"
 categorie: "Brief"
 onderwerpen: [ "verjaardag", "vier", "mijlpaal" ]
