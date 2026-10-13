@@ -37,6 +37,7 @@ commit_parsers = [
     { message = "^style", group = "Styling" },
 
     { message = "^chore\\(release\\)", skip = true },
+    { message = "^content(\\(.*\\))?:", skip = true },
     { message = "^chore", skip = true },
     { message = "^ci", skip = true },
     { message = "^test", skip = true }
