@@ -3,6 +3,12 @@
 Alle belangrijke wijzigingen aan Henry's website worden
 hier per versie bijgehouden.
 
+## [v1.2.0] - 2026-10-13
+
+### Features
+
+- Include `stories.json` in release process and feed generation logic
+
 ## [v1.1.0] - 2026-10-12
 
 ### Bug Fixes
