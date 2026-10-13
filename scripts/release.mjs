@@ -95,6 +95,7 @@ try {
     "CHANGELOG.md",
     "public/sitemap.xml",
     "public/rss.xml",
+    "public/stories.json",
   ]);
   command("git", ["commit", "-m", `chore(release): ${tag}`]);
   command("git", ["tag", "-a", tag, "-m", `Release ${tag}`]);

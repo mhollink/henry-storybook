@@ -68,7 +68,10 @@ await writeFile(
   "src/content/generated/stories.json",
   `${JSON.stringify(storyIndex, null, 2)}\n`,
 );
-
+await writeFile(
+  "public/stories.json",
+  `${JSON.stringify(storyIndex, null, 2)}\n`,
+);
 const published = posts
   .filter((post) => !post.verbergen)
   .sort((a, b) => date(b.datum) - date(a.datum));
