@@ -93,6 +93,8 @@ try {
     "package.json",
     "pnpm-lock.yaml",
     "CHANGELOG.md",
+    "public/sitemap.xml",
+    "public/rss.xml",
   ]);
   command("git", ["commit", "-m", `chore(release): ${tag}`]);
   command("git", ["tag", "-a", tag, "-m", `Release ${tag}`]);
