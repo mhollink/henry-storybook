@@ -43,6 +43,7 @@ const storyIndex = posts
       filename: post.filename,
       titel: post.titel,
       schrijver: typeof post.schrijver === "string" ? post.schrijver : "",
+      schrijverId: typeof post.schrijverId === "string" ? post.schrijverId : "",
       datum: post.datum,
       categorie:
         typeof post.categorie === "string" ? post.categorie : "Verhaal",

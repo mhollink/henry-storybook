@@ -3,6 +3,7 @@
     "filename": "2026-10-10-jouw-verhaal",
     "titel": "Jouw verhaal",
     "schrijver": "Marcel (Pappa)",
+    "schrijverId": "pappa",
     "datum": "2026-10-10",
     "categorie": "Brief",
     "onderwerpen": [
@@ -17,6 +18,7 @@
     "filename": "2025-11-13-website-voor-je-verjaardag",
     "titel": "Brief aan Henry: Je 4e wolkenverjaardag",
     "schrijver": "Marcel (Pappa)",
+    "schrijverId": "pappa",
     "datum": "2025-11-13",
     "categorie": "Brief",
     "onderwerpen": [
@@ -32,6 +34,7 @@
     "filename": "2025-11-09-brief-van-oma-t",
     "titel": "Verjaardagsdate",
     "schrijver": "Oma Twix",
+    "schrijverId": "oma-twix",
     "datum": "2025-11-09",
     "categorie": "Brief",
     "onderwerpen": [
@@ -48,6 +51,7 @@
     "filename": "2022-10-13-elf-maanden-oud",
     "titel": "11 maanden",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2022-10-13",
     "categorie": "Mijlpaal",
     "onderwerpen": [
@@ -64,6 +68,7 @@
     "filename": "2022-09-13-tien-maanden-oud",
     "titel": "10 maanden",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2022-09-13",
     "categorie": "Mijlpaal",
     "onderwerpen": [
@@ -80,6 +85,7 @@
     "filename": "2022-08-13-negen-maanden-oud",
     "titel": "9 maanden",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2022-08-13",
     "categorie": "Mijlpaal",
     "onderwerpen": [
@@ -96,6 +102,7 @@
     "filename": "2022-07-13-acht-maanden",
     "titel": "8 maandjes oud",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2022-07-13",
     "categorie": "Mijlpaal",
     "onderwerpen": [
@@ -112,6 +119,7 @@
     "filename": "2022-07-09-babykadootjes",
     "titel": "Stiekem nog steeds voor jou",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2022-07-09",
     "categorie": "Brief",
     "onderwerpen": [
@@ -127,6 +135,7 @@
     "filename": "2022-05-13-een-half-jaar",
     "titel": "Een half jaar oud",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2022-05-13",
     "categorie": "Mijlpaal",
     "onderwerpen": [
@@ -145,6 +154,7 @@
     "filename": "2022-05-04-jaardag-voorbereiding",
     "titel": "Voorbereidingen voor je verjaardag",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2022-05-04",
     "categorie": "Persoonlijk",
     "onderwerpen": [
@@ -164,6 +174,7 @@
     "filename": "2022-04-13-de-dertiende-van-de-maand",
     "titel": "De 13e van de maand",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2022-04-13",
     "categorie": "Persoonlijk",
     "onderwerpen": [
@@ -180,6 +191,7 @@
     "filename": "2022-03-13-weer-in-verwachting",
     "titel": "Weer in verwachting...",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2022-03-13",
     "categorie": "Mijlpaal",
     "onderwerpen": [],
@@ -191,6 +203,7 @@
     "filename": "2022-02-13-vandaag-drie-maandjes",
     "titel": "3 maanden.",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2022-02-13",
     "categorie": "Mijlpaal",
     "onderwerpen": [],
@@ -202,6 +215,7 @@
     "filename": "2021-12-15-wat-als-je-nog-in-mijn-buik-had-gezeten",
     "titel": "De kerststemming",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2021-12-15",
     "categorie": "Mijlpaal",
     "onderwerpen": [],
@@ -213,6 +227,7 @@
     "filename": "2021-12-05-je-eerste-sinterklaas",
     "titel": "Je eerste sinterklaas",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2021-12-05",
     "categorie": "Brief",
     "onderwerpen": [],
@@ -224,6 +239,7 @@
     "filename": "2021-12-05-sinterklaas-kapoentje",
     "titel": "Sinterklaas kapoentje",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2021-12-05",
     "categorie": "Brief",
     "onderwerpen": [],
@@ -235,6 +251,7 @@
     "filename": "2021-12-24-je-eerste-kerst",
     "titel": "Kerstavond met-zonder-jouw",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2021-12-05",
     "categorie": "Brief",
     "onderwerpen": [],
@@ -246,6 +263,7 @@
     "filename": "2021-12-31-je-eerste-jaarwisseling",
     "titel": "Oudjaarsavond...",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2021-12-05",
     "categorie": "Brief",
     "onderwerpen": [],
@@ -257,6 +275,7 @@
     "filename": "2021-11-27-twee-weken-oud",
     "titel": "2 weken oud",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2021-11-27",
     "categorie": "Brief",
     "onderwerpen": [
@@ -271,6 +290,7 @@
     "filename": "2021-11-10-laatste-werkdag",
     "titel": "10 November 2021",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2021-11-10",
     "categorie": "Persoonlijk",
     "onderwerpen": [
@@ -286,6 +306,7 @@
     "filename": "2021-12-22-de-uitgerekende-datum",
     "titel": "De uitgerekende datum",
     "schrijver": "Esmee (Mamma)",
+    "schrijverId": "mamma",
     "datum": "2021-11-10",
     "categorie": "Mijlpaal",
     "onderwerpen": [],
