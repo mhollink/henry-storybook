@@ -1,0 +1,118 @@
+name: Deploy Content
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+
+  check:
+    name: Check content changes
+    runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.changes.outputs.deploy }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify content-only changes
+        id: changes
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Find the latest version tag reachable from HEAD.
+          LAST_TAG=$(
+            git tag --merged HEAD --list 'v*' |
+            grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$' |
+            sort -V |
+            tail -n 1 || true
+          )
+
+          if [[ -z "$LAST_TAG" ]]; then
+            echo "No release tag found."
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "Comparing $LAST_TAG against HEAD"
+
+          # Include all changes since the last release.
+          # Renames are treated as separate deletions/additions.
+          git diff --name-only --no-renames -z \
+            "$LAST_TAG" HEAD > "$RUNNER_TEMP/changed-files"
+
+          if [[ ! -s "$RUNNER_TEMP/changed-files" ]]; then
+            echo "No changes since $LAST_TAG."
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          shopt -s nocasematch
+
+          while IFS= read -r -d '' file; do
+            if [[ "$file" =~ ^src/content/posts/[^/]+\.md$ ]] ||
+               [[ "$file" =~ ^public/(images|assets/posts/images)/.+\.(png|jpg|jpeg|webp|gif|avif|svg)$ ]]; then
+              echo "Allowed: $file"
+            else
+              echo "Blocked: $file"
+              echo "deploy=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          done < "$RUNNER_TEMP/changed-files"
+
+          echo "Content-only changes verified."
+          echo "deploy=true" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    name: Build and deploy content
+    needs: check
+    if: needs.check.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    environment: production
+
+    concurrency:
+      group: henry-production
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify and build
+        run: pnpm verify
+        env:
+          VITE_GA_MEASUREMENT_ID: ${{ vars.VITE_GA_MEASUREMENT_ID }}
+          VITE_CONTACT_EMAIL: ${{ vars.VITE_CONTACT_EMAIL }}
+
+      - name: Deploy website using FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          protocol: ftps
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist/
+          server-dir: /public_html/henry/
